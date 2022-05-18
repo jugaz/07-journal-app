@@ -17,6 +17,7 @@
 <script>
 import { defineAsyncComponent } from "vue";
 export default {
+    name: 'NoEntrySelected',
     components: {
         FabComponent: defineAsyncComponent(() => import('@/modules/daybook/components/FabComponent.vue'))
     },
