@@ -23,7 +23,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  //history: createWebHashHistory(), //TODO: url con hash example: localhost:8080/ruta/#/
+  
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
