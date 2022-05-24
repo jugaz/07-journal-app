@@ -2,7 +2,6 @@
   "name": "07-journal-app",
   "version": "1.0.0",
   "private": true,
-  "author": "Jesús Ugaz Vegas",
   "scripts": {
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
@@ -14,7 +13,7 @@
     "bootstrap": "^5.1.3",
     "core-js": "^3.8.3",
     "sweetalert2": "^11.4.14",
-    "vue": "^3.2.13", 
+    "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.2"
   },
@@ -42,6 +41,7 @@
   },
   "homepage": "https://github.com/jugaz/07-journal-app#readme",
   "license": "ISC",
+  "author": "Jesús Antonio Ugaz Vegas",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jugaz/07-journal-app.git"
