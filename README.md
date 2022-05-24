@@ -7,12 +7,12 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run prod
 ```
 
 ### Lints and fixes files
@@ -20,5 +20,13 @@ npm run build
 npm run lint
 ```
 
+### Run your unit tests
+```
+npm run test:unit
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 
+https://jugaz.github.io/07-journal-app/
