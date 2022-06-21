@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk_07_journal_app"]=self["webpackChunk_07_journal_app"]||[]).push([[967],{8967:function(n,a,t){t.r(a),t.d(a,{default:function(){return o}});var r=t(3396),e=t(7139);function u(n,a,t,u,c,i){return(0,r.wg)(),(0,r.iD)("button",{class:"btn btn-primary",onClick:a[0]||(a[0]=a=>n.$emit("on:click"))},[(0,r._)("i",{class:(0,e.C_)(["fa fa-2x",t.icon])},null,2)])}var c={props:{icon:{type:String,default:"fa-plus"}}},i=t(89);const l=(0,i.Z)(c,[["render",u],["__scopeId","data-v-d8b7edbe"]]);var o=l}}]);
+//# sourceMappingURL=967.e29987e5.js.map

@@ -1,7 +1,8 @@
 import daybookRouter from '@/modules/daybook/router'
 
-describe('Perubes en el router module del Daybook',() => {
 
+describe('Pruebas en el router module del Daybook', () => {
+    
     test('el router debe de tener esta configuración', async() => {
         
         expect( daybookRouter ).toMatchObject({
@@ -35,6 +36,7 @@ describe('Perubes en el router module del Daybook',() => {
 
     })
 
+
     test('debe de retornar el id de la ruta', () => {
         
         const route = {
@@ -44,11 +46,12 @@ describe('Perubes en el router module del Daybook',() => {
         }
 
         // expect( daybookRouter.children[1].props( route ) ).toEqual({ id: 'ABC-123' })
-    
         const entryRoute = daybookRouter.children.find( route => route.name === 'entry' )
         expect( entryRoute.props( route ) ).toEqual({ id: 'ABC-123' })
-
     })
+    
+
+
     
 
 })

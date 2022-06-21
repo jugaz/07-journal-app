@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 import journal from '@/modules/daybook/store/journal'
 import { journalState } from '../../../../mock-data/test-journal-state'
 
+import authApi from '@/api/authApi'
 
 const createVuexStore = ( initialState ) => 
     createStore({
@@ -16,6 +17,20 @@ const createVuexStore = ( initialState ) =>
 
 
 describe('Vuex - Pruebas en el Journal Module', () => {
+
+    beforeAll( async() => {
+
+        const { data } = await authApi.post(':signInWithPassword', {
+            email: 'test@test.com',
+            password: '123456',
+            returnSecureToken: true
+        })
+
+        localStorage.setItem('idToken', data.idToken )
+
+    })
+
+
     
     // Basicas ==================
     test('este es el estado inicial, debe de tener este state', () => {
@@ -50,7 +65,6 @@ describe('Vuex - Pruebas en el Journal Module', () => {
             date : 1652731910050,
             text : 'Esta es la segunda entrada de Firebase'
         }
-
         store.commit('journal/updateEntry', updatedEntry )
 
         const storeEntries = store.state.journal.entries
@@ -97,19 +111,20 @@ describe('Vuex - Pruebas en el Journal Module', () => {
 
     })
 
+
     // Actions ==================
     test('actions: loadEntries', async() => {
-
+        
         const store = createVuexStore({ isLoading: true, entries: [] })
 
         await store.dispatch('journal/loadEntries')
 
-        expect( store.state.journal.entries.length ).toBe(2)
+        expect( store.state.journal.entries.length ).toBe(3)
 
     })
 
     test('actions: updateEntry', async() => {
-
+        
         const store = createVuexStore( journalState )
 
         const updatedEntry = {
@@ -124,14 +139,14 @@ describe('Vuex - Pruebas en el Journal Module', () => {
 
         expect( store.state.journal.entries.length ).toBe(2)
         expect( 
-            store.state.journal.entries.find(e => e.id === updatedEntry.id )
-        ).toEqual( {
+            store.state.journal.entries.find( e => e.id === updatedEntry.id )
+        ).toEqual({
             id: '-N2DUw1RvBP4dFueH-Yg',
             date : 1652731910050,
             text : 'Hola mundo desde mock data',
-        } )
-
+        })
     })
+
 
     test('actions: createEntry deleteEntry', async() => {
         
@@ -156,4 +171,9 @@ describe('Vuex - Pruebas en el Journal Module', () => {
     
 
     })
+    
+    
+
 })
+
+

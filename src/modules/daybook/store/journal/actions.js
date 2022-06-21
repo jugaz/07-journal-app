@@ -1,7 +1,8 @@
-import journalApi from "@/api/journalApi"
+import journalApi from '@/api/journalApi'
 // export const myAction = async ({ commit }) => {
 
 // }
+
 export const loadEntries = async ({ commit }) => {
 
     const { data } = await journalApi.get('/entries.json')
@@ -27,7 +28,7 @@ export const updateEntry = async ({ commit }, entry) => {  // entry debe de ser 
     const { date, picture, text } = entry
     const dataToSave = { date, picture, text }
 
-    await journalApi.put( `/entries/${ entry.id }.json`, dataToSave )
+    const resp = await journalApi.put( `/entries/${ entry.id }.json`, dataToSave )
 
     dataToSave.id = entry.id
 

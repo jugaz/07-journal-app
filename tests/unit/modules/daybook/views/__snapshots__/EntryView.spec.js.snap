@@ -2,12 +2,12 @@
 
 exports[`Pruebas en el EntryView debe de mostrar la entrada correctamente 1`] = `
 <div class="entry-title d-flex justify-content-between p-2">
-  <div><span class="text-sucess fs-3 fw-bold">16</span><span class="mx-1 fs-3">Mayo</span><span class="mx-2 fs-4 fw-light">2022, Lunes</span></div>
+  <div><span class="text-success fs-3 fw-bold">16</span><span class="mx-1 fs-3">Mayo</span><span class="mx-2 fs-4 fw-light">2022, Lunes</span></div>
   <div><input type="file" accept="image/png, image/jpeg" style="display: none;"><button class="btn btn-danger mx-2"> Borrar <i class="fa fa-trash-alt"></i></button><button class="btn btn-primary"> Subir foto <i class="fa fa-upload"></i></button></div>
 </div>
 <hr>
 <div class="d-flex flex-column px-3 h-75"><textarea placeholder="¿Qué sucedió hoy?"></textarea></div>
+<img src="https://res.cloudinary.com/dea7hrlwi/image/upload/v1652735079/xxrrbpe0lsz5646et4af.png" alt="entry-picture" class="img-thumbnail">
 <!--v-if-->
-<!--v-if-->
-<fab-component-stub icon="fa-save"></fab-component-stub>
+<fab-stub icon="fa-save"></fab-stub>
 `;
